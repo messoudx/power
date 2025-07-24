@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>متجر بنك باور</title>
+  <!-- ربط CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1 id="headers">منتجات بنك باور</h1>
+  </header>
+
+  <main>
+    <div class="products-grid" id="products-grid"></div>
+  </main>
+
+  <nav class="nav">
+    <a href="index.html"> العودة إلى التعريف</a>
+    <span id="admin-access" class="admin-access">admin</span>
+  </nav>
+
+  <!-- بيانات المنتجات والقراءة من localStorage -->
+  <script src="js/data.js"></script>
+  <!-- عرض البطاقات ديناميكياً -->
+  <script src="js/render-products.js"></script>
+  <!-- حماية دخول الأدمن -->
+  <script>
+    document.getElementById("admin-access").addEventListener("click", function () {
+      const pass = prompt("📌 أدخل كلمة السر للدخول إلى صفحة الأدمن:");
+      if (pass === "anime power") {
+        window.location.href = "admin.html";
+      } else {
+        alert("❌ كلمة السر غير صحيحة");
+      }
+    });
+  </script>
+</body>
+</html>

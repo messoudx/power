@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تفاصيل المنتج</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="product-details-container" id="product-detail"></div>
+
+  <nav><a href="products.html">⬅ العودة إلى المتجر</a></nav>
+
+  <script src="js/data.js"></script>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get("id"), 10);
+    const product = products.find(p => p.id === id);
+
+    function addToCart() {
+      const quantity = document.getElementById("qty").value;
+      alert(`تمت إضافة ${quantity} من "${product.name}" إلى السلة.`);
+      // يمكنك هنا إضافة الكود الفعلي لتخزين البيانات في localStorage
+    }
+
+    if (product) {
+      document.getElementById("product-detail").innerHTML = `
+        <div class="product-image">
+          <img src="${product.img}" alt="${product.name}">
+        </div>
+        <div class="product-info">
+          <h1>${product.name}</h1>
+          <p class="price">${product.price} د.ج</p>
+          <p class="description">${product.desc}</p>
+          <div class="quantity">
+            <label for="qty">الكمية:</label>
+            <input type="number" id="qty" name="qty" value="1" min="1">
+          </div>
+          <button onclick="addToCart()">🛒 أضف إلى السلة</button>
+        </div>
+      `;
+    } else {
+      document.getElementById("product-detail").innerHTML = "<p>المنتج غير موجود.</p>";
+    }
+  </script>
+</body>
+</html>

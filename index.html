@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>بنك باور المركزي</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ==== شريط التنقّل ==== */
+    nav.navbar {
+      background: #a8a8a8;
+      backdrop-filter: blur(8px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 24px;
+      box-shadow: 0 2px 6px rgba(49, 49, 49, 0);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav.navbar a {
+      font-weight: bold;
+      color: #000000;
+      font-size: 1.1rem;
+      background: #696969;
+      padding: 4px 12px;
+    }
+  
+    /* ==== Hero Section ==== */
+    header.hero {
+      background: linear-gradient(to bottom, #e8f0fe 40%, #f4f5f7 100%);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    #bank-logo {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #838383;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 16px;
+    }
+    #bank-name {
+      font-size: 2rem;
+      color: #020202;
+      margin-bottom: 0;
+    }
+
+    /* تحسين الفقرات */
+    section {
+      background: #ececec;
+      padding: 24px;
+      margin: 16px auto;
+      border-radius: 8px;
+      max-width: 800px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    section h2 {
+      color: #3f72ff;
+      margin-bottom:  12px;
+    }
+    section p, section li {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    /* جدول المدراء */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background: #ffffff;
+      color: #353535;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    nav a:hover {
+  background-color: #7e7e7e;  /* أخضر أغمق */
+  transform: translateY(-2px);
+}
+  </style>
+</head>
+<body>
+
+  <!-- شريط التنقّل -->
+  <nav class="navbar">
+    <a href="#">🏛️الرئيسية</a>
+    <a href="products.html">🛒المتجر</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <img id="bank-logo" src="images/bank-logo.png" alt="شعار البنك">
+    <h1 id="bank-name">بنك باور المركزي</h1>
+  </header>
+
+  <section id="about">
+    <h2>نبذة عن البنك</h2>
+    <p>
+    بنك باور المركزي هو مؤسسة تم انشاؤها داخل مجموعة انمي باور بهدف تسيير شؤونها المالية و تسهيل تداول عملة السويك داخل المجموعة و يعد البنك من اهم و انجح المؤسسات في انمي باور
+    </p>
+  </section>
+
+  <section id="history">
+    <h2>تاريخ التأسيس</h2>
+    <p>
+      تأسس بنك باور في عام 2019 شهر 07 يوم 04 ، ومنذ ذلك الحين أصبح من بين أهم المؤسسات في انمي باور، ملتزمًا بالشفافية والابتكار.
+    </p>
+  </section>
+
+  <section id="tasks">
+    <h2>مهام البنك</h2>
+    <ul>
+      <p>تقديم خدمات مصرفية بعملة السويك</p>
+      <p>تسهيل المعاملات المالية بين الاعضاء</p>
+      <p>اقامة الفعاليات داخل المجموعة</p>
+      <p>المساعدة في تقديم التصنيف</p>
+      <p>التكفل برواتب الاعضاء ذوي المناصب </p>
+    </ul>
+  </section>
+
+  <section id="managers">
+    <h3> المدراء </h3>
+    <table>
+      <thead>
+        <tr><th>الاسم</th><th>من</th><th>إلى</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>لاكسس </td><td>2012</td><td>2018</td></tr>
+        <tr><td> هاجر </td><td>2018</td><td>الحالي</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer>
+    © 2025 بنك باور المركزي - جميع الحقوق محفوظة
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>لوحة إدارة المنتجات</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>إدارة المنتجات</h1>
+
+  <form id="product-form">
+    <input type="hidden" id="product-id">
+    <input type="text"    id="name" placeholder="اسم المنتج" required>
+    <input type="number"  id="price" placeholder="السعر" required>
+    <input type="text"    id="img" placeholder="مسار الصورة" required>
+    <textarea id="desc" placeholder="الوصف" required></textarea>
+    <button type="submit">حفظ المنتج</button>
+  </form>
+
+  <div id="admin-list"></div>
+
+  <nav><a href="products.html"> عرض المتجر</a></nav>
+
+  <!-- ترتيب السكربتات مهم جداً -->
+  <script src="js/data.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
