@@ -12,7 +12,7 @@ function renderProductCards(products) {
       <img src="${product.img}" alt="${product.name}">
       <div class="content">
         <h3>${product.name}</h3>
-        <p class="price">${product.price} د.ج</p>
+        <p class="price">${product.price} SK </p>
         <button onclick="window.location.href='product.html?id=${product.id}'">عرض التفاصيل</button>
       </div>
     `;
@@ -31,7 +31,7 @@ window.products.forEach(p => {
     <img src="${p.img}" alt="${p.name}">
     <div class="content">
       <h3>${p.name}</h3>
-      <p class="price">${p.price} د.ج</p>
+      <p class="price">${p.price} SK </p>
       <button onclick="window.location.href='product.html?id=${p.id}'">عرض التفاصيل</button>
     </div>
   `;

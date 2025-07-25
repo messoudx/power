@@ -15,7 +15,7 @@ function renderAdminList() {
     const card = document.createElement('div');
     card.className = 'admin-card';
     card.innerHTML = `
-      <strong>${p.name}</strong> — ${p.price} د.ج
+      <strong>${p.name}</strong> — ${p.price} SK
       <div>
         <button onclick="startEdit(${p.id})">تعديل</button>
         <button onclick="deleteProduct(${p.id})">حذف</button>
